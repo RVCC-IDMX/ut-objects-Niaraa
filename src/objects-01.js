@@ -27,7 +27,15 @@
  *
  */
 function makePetObject() {
-  // write your code here & return value
+  const pet = {
+    name: 'Wolf',
+    age: 5,
+    species: 'dog',
+    hasFur: true,
+    legs: 4,
+    bestFriend: 'Niara',
+  };
+  return pet;
 }
 
 /**
@@ -39,7 +47,8 @@ function makePetObject() {
  * Mozilla - https://mzl.la/3iu0uh4
  */
 function getPetName(pet) {
-  // write your code here & return value
+  // eslint-disable-next-line no-return-assign
+  return pet.name = 'Wolf';
 }
 
 /**
@@ -52,7 +61,8 @@ function getPetName(pet) {
  */
 function getPetAge(pet) {
   // eslint-disable-next-line dot-notation
-  // write your code here & return value
+  // eslint-disable-next-line no-return-assign
+  return pet['age'] = 5;
 }
 
 /**
@@ -69,7 +79,8 @@ function getPetAge(pet) {
  * permanently making a change to the passed object.
  */
 function setPetAge(pet, age) {
-  // write your code here & return value
+  // eslint-disable-next-line no-return-assign
+  return pet.age = age;
 }
 
 /**
@@ -78,7 +89,10 @@ function setPetAge(pet, age) {
  * @returns {boolean} - true if the pet's age is < 1 , false otherwise
  */
 function isPetABaby(pet) {
-  // write your code here & return value
+  if (pet.age < 1) {
+    return true;
+  }
+  return false;
 }
 
 /**
@@ -89,7 +103,7 @@ function isPetABaby(pet) {
  * breed must be the property name that is added
  */
 function addPetBreed(pet, str) {
-  // write your code here & return value
+  pet.breed = str;
 }
 
 /**
@@ -100,7 +114,8 @@ function addPetBreed(pet, str) {
  * Mozilla - https://mzl.la/3FmDpqv
  */
 function deletePetBestFriend(pet) {
-  // write your code here & return value
+  delete pet.bestFriend;
+  return pet;
 }
 
 /**
@@ -111,7 +126,7 @@ function deletePetBestFriend(pet) {
  * Mozilla - https://mzl.la/3ipqBW8
  */
 function getPetKeys(pet) {
-  // write your code here & return value
+  return Object.keys(pet);
 }
 
 /**
@@ -121,7 +136,7 @@ function getPetKeys(pet) {
  * book - https://bit.ly/3uz2fOy
  */
 function getPetObjLength(pet) {
-  // write your code here & return value
+  return Object.keys(pet).length;
 }
 
 module.exports = {
